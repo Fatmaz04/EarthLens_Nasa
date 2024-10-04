@@ -13,10 +13,11 @@ import Dashboards from './pages/Dashboards';
 import Analysis from './pages/Analysis';
 import Chapters from './pages/Chapters';
 import Game from './pages/Game';
-
+import { AuthProvider } from './contexts/AuthProvider';
 const App = () => {
   return (
     <Router>
+      <AuthProvider>
       <Routes>
         <Route path="/" element={<SignIn />} />
         <Route path="/home" element={<><Header/><Home /></>} />
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/chapter/:id/video/:videoId" element={<><Header/><Video /></>} />
         <Route path="/chapter/:id/quiz" element={<><Header/><Quiz/></>} />
       </Routes>
+      </AuthProvider>
     </Router>
   );
 };
