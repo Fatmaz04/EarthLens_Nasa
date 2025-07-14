@@ -3,10 +3,6 @@ import { addBouns, addRate, getRates, getUserRates } from "../controllers/RateCo
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-
-})
-
 router.get("/get-rates", getRates);
 
 router.post("/add-rate", addRate);
