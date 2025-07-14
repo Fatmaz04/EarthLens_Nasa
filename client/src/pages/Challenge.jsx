@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import correctSound from "../sounds/correct.mp3";
 import wrongSound from "../sounds/wrong.mp3";
-import bg from "../Img/bg3.png";
 import axios from "axios";
 import { addBouns } from "../utils/APIRoutes";
 // List of questions

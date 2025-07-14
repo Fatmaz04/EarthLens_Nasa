@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import chaptersData from "../data/chaptersData";
 import { addRate } from "../utils/APIRoutes"; // Adjust the path to your data file
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 const Quiz = () => {
-  const navigate = useNavigate();
   const { id } = useParams(); // Get the chapter ID from the URL
   const chapter = chaptersData.find((chap) => chap.id === parseInt(id));
 
